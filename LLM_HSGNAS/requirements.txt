@@ -1,0 +1,43 @@
+# =============================================================
+# LLM-HSGNAS runtime dependencies
+# Verified against the actual execution environment:
+#   Python 3.9.23, CUDA 11.8, GPU: RTX 3090
+# =============================================================
+
+# ---------- Core scientific computing ----------
+numpy==1.23.0
+scikit-learn==1.3.0
+scipy==1.13.1
+tqdm==4.65.0
+
+# ---------- PyTorch (CUDA 11.8) ----------
+# Install the CUDA build from the official PyTorch index:
+#   pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+torch==2.1.2+cu118
+torchvision==0.16.2+cu118
+torchaudio==2.1.2+cu118
+
+# ---------- PyTorch Geometric (matched to torch==2.1.2 + cu118) ----------
+# Install from the official PyG wheel index:
+#   pip install torch-scatter torch-sparse torch-cluster torch-geometric \
+#       -f https://data.pyg.org/whl/torch-2.1.2+cu118.html
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+torch-cluster==1.6.3
+torch-geometric==2.3.1
+
+# ---------- ONNX inference (edge-device deployment) ----------
+onnx==1.19.1
+onnxruntime==1.19.2
+
+# ---------- EoH framework dependencies ----------
+joblib==1.5.1
+requests==2.31.0
+
+# ---------- GPU power sampling (imported as `pynvml`) ----------
+nvidia-ml-py3==7.352.0
+
+# ---------- Optional ----------
+# numba: only required when setting eva_numba_decorator=True in runEoH.py,
+#        which adds @numba.jit to generated code. Default is False, so it can be skipped.
+# numba
