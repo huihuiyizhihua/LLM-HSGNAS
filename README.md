@@ -12,7 +12,6 @@ LLM-HSGNAS uses a large language model to generate spectral graph neural network
 
 ## Requirements
 
-- Linux or WSL2 with Bash, `timeout`, and `bc`.
 - Python 3.10, PyTorch 2.1.2 with CUDA 11.8, and PyTorch Geometric 2.3.1.
 - An LLM API endpoint and access to the target hardware for evaluation.
 
@@ -40,7 +39,6 @@ export LLM_HSGNAS_DATA_DIR="$(pwd)/LLM_HSGNAS/EoH-main/examples/GNN_layer_genera
 bash LLM_HSGNAS/running_2.sh
 ```
 
-Use an endpoint hostname without `https://` or `/v1`. The script performs generation, evaluation, and elite selection, saving results under `EoH-main/examples/result/`.
 
 ## Results
 
