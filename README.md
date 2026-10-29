@@ -7,7 +7,7 @@ Code for **Large Language Models for Hardware-aware Spectral Graph Neural Archit
 
 LLM-HSGNAS uses a large language model to generate spectral graph neural network architectures for edge devices. It combines spectral priors and deployment constraints with evolutionary search, using predictive accuracy, inference latency, throughput, energy consumption, and deployment feedback to refine candidate architectures.
 
-![Uploading image.png…]()
+![LLM-HSGNAS framework](images/framework.png)
 
 
 ## Requirements
